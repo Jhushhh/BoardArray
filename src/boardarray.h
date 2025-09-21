@@ -14,6 +14,7 @@ class BoardArray : public Board {
         }
 
         void add(Entry* entry) {
+<<<<<<< HEAD
              if (index == 0) {
                 array[0] = *entry;
                 index = 1;
@@ -55,6 +56,11 @@ class BoardArray : public Board {
                     cout << entry->name << "'s score is too low to be added!" << endl;
                 }
             }
+=======
+            // TODO: IMPLEMENT THIS FUNCTION
+            // ALGORITHM IS PROVIDED IN INSTRUCTIONS.TXT
+            return;
+>>>>>>> bbce16c7cf7469fbcf64b15eefb23e63b73e3e77
         }
 
         void print() {
