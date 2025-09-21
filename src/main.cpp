@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cstring>
 #include "boardarray.h"
 using namespace std;
 
