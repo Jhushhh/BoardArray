@@ -50,7 +50,10 @@ class BoardArray : public Board {
                     }
                     
                     array[insertPos] = *entry;
-                } 
+                } else {
+            
+                    cout << entry->name << "'s score is too low to be added!" << endl;
+                }
             }
         }
 
