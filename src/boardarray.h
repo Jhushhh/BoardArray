@@ -14,9 +14,44 @@ class BoardArray : public Board {
         }
 
         void add(Entry* entry) {
-            // TODO: IMPLEMENT THIS FUNCTION
-            // ALGORITHM IS PROVIDED IN INSTRUCTIONS.TXT
-            return;
+             if (index == 0) {
+                array[0] = *entry;
+                index = 1;
+                return;
+            }
+            
+            
+            int insertPos = index; 
+            
+           
+            for (int i = 0; i < index; i++) {
+                
+                if (entry->compare(&array[i])) {
+                    insertPos = i;
+                    break;
+                }
+            }
+            
+            
+            if (index < SIZE) {
+               
+                for (int i = index; i > insertPos; i--) {
+                    array[i] = array[i-1];
+                }
+                
+                array[insertPos] = *entry;
+                index++;
+            } else {
+                
+                if (insertPos < SIZE) {
+                    
+                    for (int i = SIZE - 1; i > insertPos; i--) {
+                        array[i] = array[i-1];
+                    }
+                    
+                    array[insertPos] = *entry;
+                } 
+            }
         }
 
         void print() {
